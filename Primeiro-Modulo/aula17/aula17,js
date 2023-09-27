@@ -1,0 +1,74 @@
+// Funções em javascript
+
+function saudacao(nome) {
+
+ return `Bom dia ${nome}`; 
+
+}
+
+saudacao("Eva");  // para passar um valor no parametro é feito quando chamamos a função
+saudacao("Marilia");
+saudacao("Joana");
+
+const variavel = saudacao("eva");
+console.log(variavel); // não vai retornar nada, se queresmos que
+// ela retorne alguma coisa tems que ir na função e colocar o return alguma coisa
+
+console.log("\n");
+
+function soma(x,y) {
+
+    const resultado = x + y;
+
+    return resultado;
+    console.log("Ola ola ")// isso não vai funcionar porque tudo que fica pi de baixo do return já não é executada
+    
+
+}
+
+const resultado = soma(34,8); // só para mostrar que variaveis que foram criadas
+// detro da função não iterferem fora delas pois aquela variavel só funciona lá
+// por isso que a variavel resultado não deu erro porque fora da função não existe uma variavel igual e ela pode ser inicializada e declarada 
+
+console.log(resultado);
+
+
+console.log(soma(2,7));
+console.log(soma(8,12));
+console.log(soma(2,90));
+
+
+console.log("\n");
+
+const raiz = function (numero){
+
+    return numero ** (1/2);
+}
+
+console.log(raiz(16));
+console.log(raiz(27));
+console.log(raiz(9));
+
+console.log("\n");
+
+
+
+/* array function : é a mesma coisa com a função de cima, mais claro 
+elas apareceram para facilitar avida do programador
+
+const raiz = (numero) => {
+
+    return numero ** (1/2);
+}
+ Ou
+
+ const raiz = (numero) =>  numero ** (1/2);
+
+ Ou
+
+ 
+ const raiz = numero =>  numero ** (1/2);
+}
+
+Maneiras curtas de fazer uma coisa bem mais rapido e prataico
+*/

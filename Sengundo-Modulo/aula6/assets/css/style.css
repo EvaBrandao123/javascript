@@ -1,0 +1,81 @@
+/* é desse jeito que se cria uma variavel em css*/
+:root{
+
+    --primary-color:#036ca8;
+    --primary-color-darker:  ;
+}
+
+*{
+
+    box-sizing: border-box;
+    outline: none;
+
+}
+body{
+
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color) ;
+    font-family: "Open sans " sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5rem; 
+}
+
+.container{
+
+    max-width: 640px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+
+
+}
+
+form input , form label, form button{
+
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+
+
+}
+
+form input{
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+
+}
+
+form input:focus{
+
+    outline: 1px solid var(--primary-color);
+}
+
+form button{
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px ;
+
+}
+
+form button:hover{
+    background: var(--primary-color);
+}
+
+.paragrafo-resultado{
+
+    background: #08a16c;
+    padding: 10px 20px;
+    
+}
+.bad{
+
+    background-color: rosybrown;
+}

@@ -1,0 +1,103 @@
+// Função Reduce -> É MAIS UTIlizada para reduzir o array a um elemento
+// O acumulador serve para 
+// SOME todos ps números (reduce)
+// Retorne um array com os pares (Filter)
+// Retorne um array com o dobro dos valores (Map)
+
+//Ex de reduce:
+const numeros = [2,6,4,8,0,5,12,90,345,7,3,8];
+
+const total = numeros.reduce(function(acumulador, valor, indice, array){
+acumulador = acumulador + valor;
+return acumulador;
+
+}, 0);// o valor 0 é opcional, mesmo que eu não colocasse, o valor do acumulador
+// seria o primeiro valor do meu array que é 2
+// consegui compreender como funciona o reduce, ele soma todos os valores do meu 
+// array e retorna uma valor único, que neste exercicio é 490 o total
+
+console.log(total);
+
+// É mais utilizar o filter
+console.log("\n...... Array os Pares");
+const arrayPar = numeros.reduce(function(acumulador, valor, indice, array){
+  if(valor % 2 === 0){
+    acumulador.push(valor);
+  }
+    return acumulador;
+    
+    }, []);
+
+    console.log(arrayPar);
+
+// É mais utilizar o filter, pois o reduce é mesmo para retornar um unico valor
+    console.log("\n...... Array os Impares");
+const arrayImpar = numeros.reduce(function(acumulador, valor, indice, array){
+  if(valor % 2 !== 0){
+    acumulador.push(valor);
+  }
+    return acumulador;
+    
+    }, []);
+
+    console.log(arrayImpar);
+
+// É mais utilizar o map, pois o reduce é mesmo para retornar um unico valor
+    console.log("\n...... Array os dobros");
+const dobro = numeros.reduce(function(acumulador, valor, indice, array){
+ acumulador.push(valor * 2);
+    return acumulador;
+    
+    }, []);
+
+    console.log(dobro);
+
+// Outra maneira de fazer 
+console.log("\n...... Array total2");
+const somaPar = numeros.reduce(function(acumulador, valor){
+if(valor % 2 === 0){
+    acumulador = acumulador + valor;
+  
+}
+    return acumulador;
+    
+    }, 0);
+
+    console.log(somaPar);
+
+ 
+    console.log("\n...... Array soma Impar");
+    const somaImpar = numeros.reduce(function(acumulador, valor){
+    if(valor % 2 !== 0){
+        acumulador = acumulador + valor;
+      
+    }
+        return acumulador;
+        
+        }, 0);
+    
+        console.log(somaImpar);
+
+
+        // Retorne a pessoa mais velha
+
+        const pessoas = [
+
+            {nome: "Eva", idade: 19},
+            {nome: "Brandão", idade: 21},
+            {nome: "Linda", idade: 32},
+            {nome: "Dadiva", idade: 59},
+            {nome: "Maria", idade: 45},
+            {nome: "Ana", idade: 29},
+            {nome: "Evi", idade: 29}
+        ];
+
+        console.log("\n..... Mais velha");
+        const maisVelha = pessoas.reduce(function(acumulador, valor){
+
+if(acumulador.idade > valor.idade) return acumulador;
+return valor;
+
+        }, 0);
+
+        console.log(maisVelha);
